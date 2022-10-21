@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main () {
+	
+	int dozen, truck, gross, eggs, excess;
+	
+	printf("Number of eggs that need to be transported:\t");
+	scanf("%d", &eggs);
+	
+	truck = eggs / 2880;
+	excess= eggs % 2880;
+	gross = excess / 144;
+	excess= excess % 144;
+	dozen = excess / 12;
+	excess= excess % 12;
+	eggs = excess;
+	
+	
+	printf("Trucks needed to transport the eggs:\t%d\n", truck);
+	printf("Gross: %d ::Dozen: %d ::Eggs: %d", gross, dozen, eggs);
+	
+	return 0;
+	
+}
